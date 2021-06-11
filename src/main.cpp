@@ -17,8 +17,8 @@ int main(int argc, char *argv[]){
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 	glutCreateWindow("Perspective Projection");
 	glutDisplayFunc(displayCube);
-	glutMouseFunc(mouse);
-	glutMotionFunc(mouseMovement);
+	glutMouseFunc(mouseState);
+	glutMotionFunc(mouseMotion);
 	glutReshapeFunc(perspective_projection);
 
 	if (!initialize())
@@ -29,8 +29,8 @@ int main(int argc, char *argv[]){
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 	glutCreateWindow("Cavalier Projection");
 	glutDisplayFunc(displayCube);
-	glutMouseFunc(mouse);
-	glutMotionFunc(mouseMovement);
+	glutMouseFunc(mouseState);
+	glutMotionFunc(mouseMotion);
 	glutReshapeFunc(cavalier_projection);
 
 	if (!initialize())
@@ -41,8 +41,8 @@ int main(int argc, char *argv[]){
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 	glutCreateWindow("Cabinet Projection");
 	glutDisplayFunc(displayCube);
-	glutMouseFunc(mouse);
-	glutMotionFunc(mouseMovement);
+	glutMouseFunc(mouseState);
+	glutMotionFunc(mouseMotion);
 	glutReshapeFunc(cabinet_projection);
 
 	if (!initialize())

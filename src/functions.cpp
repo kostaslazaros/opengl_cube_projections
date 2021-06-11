@@ -16,42 +16,42 @@ void createCube(){
 	glBegin(GL_QUADS);
 
 	// TOP SQUARE
-	glColor3f(0.3f, 0.0f, 0.0f);
+	glColor3f(0.4f, 0.0f, 0.0f);
 	glVertex3f(-0.5f, 0.5f, 0.5f);
 	glVertex3f( 0.5f, 0.5f, 0.5f);
 	glVertex3f( 0.5f, 0.5f, -0.5f);
 	glVertex3f(-0.5f, 0.5f, -0.5f);
 
 	// BOTTOM SQUARE
-	glColor3f(0.3f, 0.3f, 0.0f);
+	glColor3f(0.4f, 0.4f, 0.0f);
 	glVertex3f(-0.5f, -0.5f, 0.5f);
 	glVertex3f(-0.5f, -0.5f, -0.5f);
 	glVertex3f( 0.5f, -0.5f, -0.5f);
 	glVertex3f( 0.5f, -0.5f, 0.5f);
 
 	// FRONT SQUARE
-	glColor3f(0.0f, 0.0f, 0.3f);
+	glColor3f(0.0f, 0.0f, 0.4f);
 	glVertex3f(-0.5f, -0.5f, 0.5f);
 	glVertex3f( 0.5f, -0.5f, 0.5f);
 	glVertex3f( 0.5f, 0.5f, 0.5f);
 	glVertex3f(-0.5f, 0.5f, 0.5f);
 
 	// BACK	SQUARE
-	glColor3f(0.3f, 0.0f, 0.3f);
+	glColor3f(0.4f, 0.0f, 0.4f);
 	glVertex3f(-0.5f, -0.5f, -0.5f);
 	glVertex3f(-0.5f, 0.5f, -0.5f);
 	glVertex3f( 0.5f, 0.5f, -0.5f);
 	glVertex3f( 0.5f, -0.5, -0.5f);
 
 	// RIGHT SQUARE
-	glColor3f(0.2f, 0.6f, 0.2f);
+	glColor3f(1.0f, 0.5f, 0.0f);
 	glVertex3f( 0.5f, -0.5f, -0.5f);
 	glVertex3f( 0.5f, 0.5f, -0.5f);
 	glVertex3f( 0.5f, 0.5f, 0.5f);
 	glVertex3f( 0.5f, -0.5f, 0.5f);
 
 	// LEFT SQUARE
-	glColor3f(0.4f, 0.0f, 0.0f);
+	glColor3f(1.0f, 1.0f, 0.0f);
 	glVertex3f(-0.5f, -0.5, 0.5f);
 	glVertex3f(-0.5f, 0.5f, 0.5f);
 	glVertex3f(-0.5f, 0.5f, -0.5f);
@@ -89,7 +89,7 @@ void displayCube(void){
 }
 
 
-void mouse(int button, int state, int x, int y){
+void mouseState(int button, int state, int x, int y){
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN){
 		mouseClicked = 1;
 		dx = x - y_rotation;
@@ -99,7 +99,7 @@ void mouse(int button, int state, int x, int y){
 }
 
 
-void mouseMovement(int x, int y){
+void mouseMotion(int x, int y){
 	if (mouseClicked){
 		y_rotation = x - dx;
 		x_rotation = y + dy;
@@ -139,7 +139,7 @@ void cabinet_projection(int w, int h){
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
-	double theta = 63.4;
+	double theta = 63.0;
     double cabinet[16] = {
             1.0                               , 0.0                               , 0.0, 0.0,
             0.0                               , 1.0                               , 0.0, 0.0,

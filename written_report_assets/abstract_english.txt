@@ -1,0 +1,33 @@
+This paper presents the implementation of a simple unit cube which can be interactively rotated around the x, y and z axes as well as the implementation of three different projections of the cube on the xy plane. Those projections are the following:
+
+1) Perspective projection
+
+2) Cavalier projection
+
+3) Cabinet projection
+
+The code was developed in C++ using functions from the OpenGl graphics library.
+
+The first chapter is a brief analysis of the source code implemented for drawing the unit cube and making it interactive.
+
+The second chapter describes the implementation of the cavalier oblique projection.
+
+
+The third chapter describes the implementation of the cabinet oblique projection.
+
+Finally conlcusions are drawn and the sources used to implement the project are provided.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
